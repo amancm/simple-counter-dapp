@@ -1,18 +1,125 @@
-# React + Vite
+🧠 Simple Counter DApp – React + Solidity + MetaMask + Etherscan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Web3 decentralized application (DApp) that stores a counter value and user messages on the blockchain, with full support for MetaMask, Etherscan event logs, and a modern UI built using React (Vite) and Ethers.js.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 Smart Contract (Solidity)
 
-## React Compiler
+🦊 MetaMask Wallet Integration
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+⚡ Increment Counter + Save Message On-Chain
 
-Note: This will impact Vite dev & build performances.
+📖 Real-Time Message History
 
-## Expanding the ESLint configuration
+🔍 One-Click “View on Etherscan”
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📝 Event Logs (MessageAdded) visible on Etherscan
+
+🎨 Modern UI with custom CSS
+
+🔄 Auto-update when wallet changes
+
+♻️ Reset function clears counter + history
+
+📦 Tech Stack
+Component	Technology
+Frontend	React (Vite)
+Blockchain	Ethereum Sepolia Testnet
+Smart Contract	Solidity
+Wallet	MetaMask
+Web3 Library	Ethers.js v6
+Explorer	Etherscan
+📜 Smart Contract Overview
+
+The contract supports:
+
+Increment counter with a message
+
+Store every message in an array
+
+Track:
+
+Message text
+
+Sender wallet
+
+Timestamp
+
+Emit MessageAdded event
+
+Reset full history
+
+event MessageAdded(string message, address indexed sender, uint256 timestamp);
+
+🖥️ Frontend Overview
+
+The React DApp allows users to:
+
+Connect MetaMask
+
+Enter a custom message
+
+Increment on-chain counter
+
+See message history instantly
+
+View Etherscan logs
+
+Reset the blockchain state
+
+Auto-refresh on wallet account change
+
+🔗 Etherscan Integration
+
+Every increment creates a blockchain event:
+
+MessageAdded(message, sender, timestamp)
+
+
+You can view all events under:
+
+Etherscan → Events → Logs
+
+The DApp includes a button:
+
+View Contract on Etherscan
+
+
+This opens the contract page instantly.
+
+📂 Project Structure
+simple-counter-dapp/
+│
+├── src/
+│   ├── App.jsx        # Main DApp logic
+│   ├── index.css      # UI Styling
+│   ├── main.jsx       # React entry point
+│
+├── package.json
+├── vite.config.js
+├── README.md
+
+▶️ How to Run the Project
+npm install
+npm run dev
+
+
+Open in browser:
+
+http://localhost:5173
+
+
+Make sure MetaMask is installed and connected to Sepolia testnet.
+
+⚙️ Deployment
+
+You can deploy the frontend using:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+(Ask if you want help deploying.)
